@@ -1,0 +1,465 @@
+    body {
+        background-color: #0a0a0a;
+        overflow: hidden;
+    }
+
+/* CARREGAMENTO */
+
+    /* Media query para telas com largura menor que 768px (dispositivos móveis) */
+    @media (max-width: 450px) {
+        .pagina {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+        
+        .container-texto-carregando {
+            width: 165px;
+            padding-bottom: 5px;
+        }
+
+        .container-texto-carregando p{
+            margin-bottom: 0px; 
+        }
+        
+        .container-loading {
+            display: flex;
+        }
+        
+        .barra-progresso {
+            display: flex;
+            position: relative;
+            padding-top: 3.75px; /* 15px / 4 */
+            padding-bottom: 3.75px; /* 15px / 4 */
+            padding-left: 2px;
+            padding-right: 2px;
+            border-width: 1.25px 1.25px 1.25px 1.25px; /* 5px / 4 */
+            border-color: white; /* Cor da borda */
+            border-style: solid; /* Estilo da borda */
+            width: 125px; /* 500px / 4 */
+            height: 7.5px; /* 30px / 4 */
+            margin-right: 2.5px; /* 10px / 4 */
+        }
+        
+        .quadrado {
+            margin-right: 2.5px; /* 10px / 4 */
+            margin-left: 2.5px; /* 10px / 4 */
+            width: 12.5px; /* 50px / 4 */
+            height: 7.5px; /* 30px / 4 */
+            background-color: white;
+            opacity: .3;
+            transition: opacity 0.5s ease;
+            animation: fillAnimation 3s linear forwards;
+        }
+        
+        #divisao-progresso {
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            width: 31.25px; /* 125px / 4 */
+            bottom: -3.125px; /* 12.5px / 4 */
+            right: 3.125px; /* 15px / 4 */
+        }
+        
+        .barra-divisao-progresso {
+            bottom: -3.125px; /* 12.5px / 4 */
+            right: 3.125px; /* 15px / 4 */
+            width: 5px; /* 20px / 4 */
+            height: 5px; /* 20px / 4 */
+            background-color: #0a0a0a;
+            transform: rotate(60deg);
+        }
+        
+        .barra-porcentagem {
+            display: flex;
+            align-items: center;
+        }
+        
+        .barra-porcentagem-esquerda {
+            border-width: 1.25px 0px 1.25px 1.25px; /* 5px / 4 */
+            border-color: white; /* Cor da borda */
+            border-style: solid;
+            width: 3.125px; /* 15px / 4 */
+            height: 15px; /* 60px / 4 */
+        }
+        
+        .barra-porcentagem-direita {
+            border-width: 1.25px 1.25px 1.25px 0px; /* 5px / 4 */
+            border-color: white; /* Cor da borda */
+            border-style: solid;
+            width: 3.125px; /* 15px / 4 */
+            height: 15px; /* 60px / 4 */
+        }
+        
+        .barra-porcentagem-texto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 12.5px; /* 50px / 4 */
+        }
+        
+        .barra-porcentagem-texto p {
+            font-size: 12.5px; /* 50px / 4 */
+        }
+        
+    }
+
+/* ================================================== TABLETS ==================================================*/
+
+    /* Media query para telas com largura entre 768px e 1023px (tablets em modo retrato) */
+    @media (min-width: 451px) and (max-width: 1023px) {
+        .pagina {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+        
+        .container-texto-carregando {
+            width: 330px; 
+        }
+
+        .container-texto-carregando p{
+            margin-bottom: 0px; 
+        }
+        
+        .container-loading {
+            display: flex;
+        }
+        
+        .barra-progresso {
+            display: flex;
+            position: relative;
+            padding-top: 7.5px; /* 15px / 2 */
+            padding-bottom: 7.5px; /* 15px / 2 */
+            border-width: 2.5px 2.5px 2.5px 2.5px; /* 5px / 2 */
+            border-color: white; /* Cor da borda */
+            border-style: solid; /* Estilo da borda */
+            width: 250px; /* 500px / 2 */
+            height: 15px; /* 30px / 2 */
+            margin-right: 5px; /* 10px / 2 */
+        }
+        
+        .quadrado {
+            margin-right: 5px; /* 10px / 2 */
+            margin-left: 5px; /* 10px / 2 */
+            width: 25px; /* 50px / 2 */
+            height: 15px; /* 30px / 2 */
+            background-color: white;
+            opacity: .3;
+            transition: opacity 0.5s ease;
+            animation: fillAnimation 3s linear forwards;
+        }
+        
+        #divisao-progresso {
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            width: 75px; /* 150px / 2 */
+            bottom: -7.5px; /* 15px / 2 */
+            right: 7.5px; /* 15px / 2 */
+        }
+        
+        .barra-divisao-progresso {
+            bottom: -7.5px; /* 15px / 2 */
+            right: 7.5px; /* 15px / 2 */
+            width: 10px; /* 20px / 2 */
+            height: 10px; /* 20px / 2 */
+            background-color: #0a0a0a;
+            transform: rotate(60deg);
+        }
+        
+        .barra-porcentagem {
+            display: flex;
+            align-items: center;
+        }
+        
+        .barra-porcentagem-esquerda {
+            border-width: 2.5px 0px 2.5px 2.5px; /* 5px / 2 */
+            border-color: white; /* Cor da borda */
+            border-style: solid;
+            width: 7.5px; /* 15px / 2 */
+            height: 30px; /* 60px / 2 */
+        }
+        
+        .barra-porcentagem-direita {
+            border-width: 2.5px 2.5px 2.5px 0px; /* 5px / 2 */
+            border-color: white; /* Cor da borda */
+            border-style: solid;
+            width: 7.5px; /* 15px / 2 */
+            height: 30px; /* 60px / 2 */
+        }
+        
+        .barra-porcentagem-texto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 25px; /* 50px / 2 */
+        }
+        
+        .barra-porcentagem-texto p {
+            font-size: 25px; /* 50px / 2 */
+        }        
+    }
+
+/* ================================================== COMPUTADORES ==================================================*/
+
+    /* Media query para telas com largura maior ou igual a 1024px (tablets em modo paisagem e desktops) */
+    @media (min-width: 1024px) {
+        .pagina {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            }
+        
+            .container-texto-carregando {
+                width: 660px; 
+                padding-bottom: 5px;
+            }
+
+            .container-texto-carregando p{
+                margin-bottom: 0px; 
+                font-size: 2em;
+            }
+        
+            .container-loading {
+                display: flex;
+            }
+        
+            .barra-progresso {
+                display: flex;
+                position: relative;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border-width: 5px 5px 5px 5px; /* Espessura da borda: superior, direita, inferior, esquerda */
+                border-color: white; /* Cor da borda */
+                border-style: solid; /* Estilo da borda */
+                width: 500px;
+                height: 30px;
+                margin-right: 10px;
+            }    
+        
+            .quadrado {
+                margin-right: 10px;
+                margin-left: 10px;
+                width: 50px;
+                height: 30px;
+                background-color: white;
+                opacity: .3;
+                transition: opacity 0.5s ease;
+                animation: fillAnimation 3s linear forwards;
+            }
+        
+            #divisao-progresso {
+                display: flex;
+                position: absolute;
+                justify-content: space-between;
+                width: 150px;
+                bottom: -12px;
+                right: 15px;
+            }
+        
+            .barra-divisao-progresso {
+                bottom: -10px;
+                right: 15px;
+                width: 20px;
+                height: 20px;
+                background-color: #0a0a0a;
+                transform: rotate(60deg);
+            }
+        
+            .barra-porcentagem {
+                display: flex;
+                align-items: center;
+            }
+        
+            .barra-porcentagem-esquerda {
+                border-width: 5px 0px 5px 5px; /* Espessura da borda: superior, direita, inferior, esquerda */
+                border-color: white; /* Cor da borda */
+                border-style: solid;
+                width: 15px;
+                height: 60px;
+            }
+        
+            .barra-porcentagem-direita {
+                border-width: 5px 5px 5px 0px; /* Espessura da borda: superior, direita, inferior, esquerda */
+                border-color: white; /* Cor da borda */
+                border-style: solid;
+                width: 15px;
+                height: 60px;
+            }
+        
+            .barra-porcentagem-texto {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                
+            }
+            
+            .barra-porcentagem-texto p {
+                font-size: 50px;
+            }       
+    }
+    
+
+    .quadrado:nth-child(1) {
+        animation-delay: 0.2s; /* Delay para preencher o primeiro quadrado */
+    }
+    
+    .quadrado:nth-child(2) {
+        animation-delay: 0.4s; /* Delay para preencher o segundo quadrado */
+    }
+    
+    .quadrado:nth-child(3) {
+        animation-delay: 0.6s; /* Delay para preencher o terceiro quadrado */
+    }
+    
+    .quadrado:nth-child(4) {
+        animation-delay: 0.8s; /* Delay para preencher o quarto quadrado */
+    }
+    
+    .quadrado:nth-child(5) {
+        animation-delay: 1.0s; /* Delay para preencher o quinto quadrado */
+    }
+    
+    .quadrado:nth-child(6) {
+        animation-delay: 1.2s; /* Delay para preencher o sexto quadrado */
+    }
+
+    .quadrado:nth-child(7) {
+        animation-delay: 1.4s; /* Delay para preencher o sexto quadrado */
+    }
+
+    .quadrado:nth-child(8) {
+        animation-delay: 1.6s; /* Delay para preencher o sexto quadrado */
+    }
+
+    .quadrado:nth-child(9) {
+        animation-delay: 1.8s; /* Delay para preencher o sexto quadrado */
+    }
+
+    .quadrado:nth-child(10) {
+        animation-delay: 2.0s; /* Delay para preencher o sexto quadrado */
+    }
+    
+    @keyframes fillAnimation {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* Importação da fonte Orbitron do Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+    /* Definição da classe .orbitron para usar a fonte */
+    .orbitron {
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold; /* ou o peso de fonte desejado */
+    font-style: normal; /* ou itálico se necessário */
+    }
+
+    @keyframes encerramentoCarregamento {
+        0% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+        100% {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+    }
+    
+    #carregamento {
+        display: flex; /* Certifique-se de que o elemento pai use um layout flexível */
+        flex-direction: column; /* Ajuste a direção do fluxo para coluna se os elementos filhos forem empilhados verticalmente */
+        align-items: center; /* Alinhe os elementos filhos verticalmente ao centro */
+        animation: encerramentoCarregamento 0.5s linear forwards;
+        animation-delay: 2.2s;
+    }
+    
+
+/* INICIALIZAÇÃO */
+
+    .inicializacao-texto{
+        font-size: 3em;
+        border-right: 5px solid;
+        border-color: white;
+        width: 12ch;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: digitar 2s steps(14), piscar .5s infinite step-end;
+    }
+
+    @keyframes digitar {
+        from{
+            width: 0;
+        }
+    }
+
+    @keyframes piscar {
+        50%{
+            border-color: transparent;
+        }
+    }
+
+    .fechar-texto {
+        font-size: 3em;
+        border-right: 5px solid;
+        border-color: white;
+        width: 12ch;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: apagar 2s steps(14) forwards, piscar .5s infinite step-end 2s;
+    }
+    
+    @keyframes apagar {
+        0% {
+            width: 12ch;
+        }
+        100% {
+            width: 0;
+        }
+    }
+
+    .fechar {
+        animation: encerramentoCarregamento 0.5s linear forwards;
+        animation-delay: 2s;
+    }
+    
+    .abrir-tela {
+        width: 85%;
+        height: 90%;
+        border-top: 2px solid greenyellow;
+        border-bottom: 2px solid greenyellow;
+        animation: abrirTela 1s linear forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    @keyframes abrirTela {
+        from {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+        to {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+    }

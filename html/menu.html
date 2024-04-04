@@ -1,0 +1,24 @@
+<div class="abrir-tela"> <ul><li><button type="button" id="quemsoueu" onclick="scrollDireita()">Quem sou eu?</button></li><li><button id="projetos" onclick="scrollEsquerda()">Projetos</button></li><li><button id="contato" onclick="scrollCima()">Contato</button></li></ul></div><script src="js/execucao.js"></script>
+
+<script>
+    function scrollDireita(){
+        $('.abrir-tela').addClass('moverEsquerda');
+        setTimeout(function() {
+        $('.pagina').html('<div id="conteudo-quemsoueu" class="moverEsquerda container-conteudo">teste</div>')}
+        , 710);
+    }
+
+    function scrollEsquerda(){
+        $('.abrir-tela').addClass('moverDireita');
+        setTimeout(function() {
+        $('.pagina').html('<div id="conteudo-projetos" class="moverDireita container-conteudo">teste</div>')}
+        , 710);
+    }
+
+    function scrollCima(){
+        $('.abrir-tela').addClass('moverCima');
+        setTimeout(function() {
+        $('.pagina').html('<div id="conteudo-contato" class="moverCima container-conteudo">teste</div>')}
+        , 400);
+    }
+</script>

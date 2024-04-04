@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo D. S. Lima</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="pagina">
+        <div id="carregamento">
+            <div class="container-texto-carregando">
+                <p id="textoCarregamento" class="orbitron">Loading</p>
+            </div>
+            <div class="container-loading">
+                <div class="barra-progresso">
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div class="quadrado"></div>
+                    <div id="divisao-progresso">
+                        <div class="barra-divisao-progresso"></div>
+                        <div class="barra-divisao-progresso"></div>
+                        <div class="barra-divisao-progresso"></div>
+                        <div class="barra-divisao-progresso"></div>
+                    </div>
+                </div>
+                <div class="barra-porcentagem">
+                    <div class="barra-porcentagem-esquerda"></div>
+                    <div class="barra-porcentagem-texto">
+                        <p><span id="percentual">0%</span></p>
+                    </div>
+                    <div class="barra-porcentagem-direita"></div>
+                </div>
+            </div>
+        </div>     
+        <script src="js/carregamento.js"></script>
+    </div>
+
+    <script src="js/execucao.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
